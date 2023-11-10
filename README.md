@@ -9,3 +9,5 @@
 [Parte 4: Controladores, templates y estilos con Tailwind CSS en Symfony 6](https://cosasdedevs.com/posts/controladores-templates-estilos-tailwindcss-symfony-6/)
 
 [Parte 5: Optimización de queries con Doctrine, ajustes y página de post en Symfony 6](https://cosasdedevs.com/posts/optimizacion-queries-doctrine-ajustes-pagina-post-symfony-6/)
+
+[Parte 6: Autenticación y registro con Symfony 6](https://cosasdedevs.com/posts/autenticacion-registro-symfony-6/)

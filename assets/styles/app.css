@@ -29,3 +29,33 @@ footer > ul > li {
 footer > ul > li > a:hover {
     @apply underline;
 }
+
+.button {
+    @apply inline-block p-2 mx-1 bg-orange-300 text-white uppercase text-xs font-medium text-center;
+}
+
+.button:hover {
+    @apply bg-orange-400;
+}
+
+.header-login-register {
+    @apply text-xl font-medium py-2;
+}
+
+.form-blog {
+    @apply text-center;
+}
+
+.form-blog div {
+    @apply p-2;
+}
+
+.form-blog div input[type=text], 
+.form-blog div input[type=password], 
+.form-blog div input[type=email] {
+    @apply py-1 px-2 border-slate-300 border rounded w-full;
+}
+
+.form-blog label, .form-blog input {
+    @apply block text-left;
+}

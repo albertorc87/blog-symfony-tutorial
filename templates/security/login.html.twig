@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Iniciar sesión{% endblock %}
+
+{% block body %}
+<div class="mt-10 md:flex justify-center">
+    <div class="max-w-full flex-row justify-center mb-8 md:mr-2">
+        <form method="post">
+            {% if error %}
+                <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+            {% endif %}
+
+            {% if app.user %}
+                <div class="mb-3">
+                    You are logged in as {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Logout</a>
+                </div>
+            {% endif %}
+
+            <div class="form-blog">
+                <h1 class="header-login-register">Entra en mi blog de Symfony</h1>
+                <div>
+                    <label for="inputEmail" class="required">Email:</label>
+                    <input type="email" value="{{ last_username }}" name="email" id="inputEmail" autocomplete="email" required autofocus>
+                </div>
+                <div>
+                    <label for="inputPassword" class="required">Contraseña:</label>
+                    <input type="password" name="password" id="inputPassword" autocomplete="current-password" required>
+                </div>
+
+                <input type="hidden" name="_csrf_token"
+                    value="{{ csrf_token('authenticate') }}"
+                >
+
+                <button class="button" type="submit">
+                    Iniciar sesión
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
+{% block footer %}{% endblock %}

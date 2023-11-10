@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Regístrate en mi blog de Symfony{% endblock %}
+
+{% block body %}
+<div class="mt-10 md:flex justify-center">
+    <div class="max-w-full flex-row justify-center mb-8 md:mr-2 text-center">
+    <h1 class="header-login-register">Regístrate en mi blog de Symfony</h1>
+
+    {{ form_start(registrationForm) }}
+
+        <div class="form-blog">
+            {{ form_row(registrationForm.email, {
+                label: 'Email:'
+            }) }}
+            {{ form_row(registrationForm.username, {
+                label: 'Nombre de usuario:'
+            }) }}
+            {{ form_row(registrationForm.plainPassword, {
+                label: 'Contraseña:'
+            }) }}
+            {{ form_row(registrationForm.agreeTerms, {
+                label: 'Aceptar términos:'
+            }) }}
+
+            <button type="submit" class="button">Registrarse</button>
+        </div>
+    {{ form_end(registrationForm) }}
+    </div>
+</div>
+{% endblock %}
+{% block footer %}{% endblock %}

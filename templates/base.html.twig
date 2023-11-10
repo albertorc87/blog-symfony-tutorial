@@ -28,6 +28,19 @@
                     <li>
                         <a href="http://">Acerca de mi</a>
                     </li>
+                    {% if app.user %}
+                        <li>
+                            <a href="{{ path('app_logout') }}">Cerrar sesión</a> |
+                            <strong>{{ app.user.username }}</strong>
+                        </li>
+                    {% else %}
+                        <li>
+                            <a href="{{ path('app_login') }}">Login</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('app_register') }}">Registro</a>
+                        </li>
+                    {% endif %}
                 </ul>
                 <ul class="flex justify-between w-20">
                     <li>
@@ -55,6 +68,7 @@
             </div>
         </header>
         {% block body %}{% endblock %}
+        {% block footer %}
         <footer class="text-center text-white bg-teal-900 py-4">
             <ul class="md:flex justify-center">
                 <li><a href="http://">Hola</a></li>
@@ -63,5 +77,6 @@
                 <li>&#174; {{'now'|date('Y')}} Mi blog con Symfony 6 y TailwindCSS 🧑‍💻</li>
             </ul>
         </footer>
+        {% endblock %}
     </body>
 </html>
