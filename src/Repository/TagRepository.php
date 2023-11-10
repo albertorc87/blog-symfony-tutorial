@@ -21,7 +21,30 @@ class TagRepository extends ServiceEntityRepository
         parent::__construct($registry, Tag::class);
     }
 
-//    /**
+    public function getTagsByPostIds(array $post_ids): array
+    {
+        $tags = $this->createQueryBuilder('t')
+            ->select('p.id, t.name')
+            ->innerJoin('t.posts', 'p')
+            ->andWhere('p.id IN (:post_ids)')
+            ->setParameter('post_ids', $post_ids)
+            ->getQuery()
+            ->getResult();
+
+        $tags_by_post = [];
+
+        foreach ($tags as $tag) {
+            if (!isset($tags_by_post[$tag['id']])) {
+                $tags_by_post[$tag['id']] = [];
+            }
+
+            $tags_by_post[$tag['id']][] = $tag['name'];
+        }
+
+        return $tags_by_post;
+    }
+
+    //    /**
 //     * @return Tag[] Returns an array of Tag objects
 //     */
 //    public function findByExampleField($value): array
@@ -36,7 +59,7 @@ class TagRepository extends ServiceEntityRepository
 //        ;
 //    }
 
-//    public function findOneBySomeField($value): ?Tag
+    //    public function findOneBySomeField($value): ?Tag
 //    {
 //        return $this->createQueryBuilder('t')
 //            ->andWhere('t.exampleField = :val')
