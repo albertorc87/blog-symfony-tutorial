@@ -44,6 +44,9 @@ class Post
     #[ORM\OneToMany(mappedBy: 'post', targetEntity: Comment::class, orphanRemoval: true)]
     private Collection $comments;
 
+    #[ORM\Column(nullable: true)]
+    private ?\DateTimeImmutable $publication_date = null;
+
     public function __construct()
     {
         $this->tags = new ArrayCollection();
@@ -189,6 +192,18 @@ class Post
                 $comment->setPost(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getPublicationDate(): ?\DateTimeImmutable
+    {
+        return $this->publication_date;
+    }
+
+    public function setPublicationDate(?\DateTimeImmutable $publication_date): static
+    {
+        $this->publication_date = $publication_date;
 
         return $this;
     }
