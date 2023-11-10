@@ -52,7 +52,7 @@ final class PostFactory extends ModelFactory
         $created_and_publicated = \DateTimeImmutable::createFromMutable(self::faker()->dateTime());
 
         return [
-            'content' => self::faker()->text(),
+            'content' => self::faker()->text(500),
             'created_at' => $created_and_publicated,
             'publication_date' => $created_and_publicated,
             'is_draft' => false,

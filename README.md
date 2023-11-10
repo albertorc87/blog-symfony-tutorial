@@ -7,3 +7,5 @@
 [Parte 3: Cómo crear datos falsos en una base de datos con Symfony 6](https://cosasdedevs.com/posts/como-crear-datos-falsos-base-de-datos-symfony-6/)
 
 [Parte 4: Controladores, templates y estilos con Tailwind CSS en Symfony 6](https://cosasdedevs.com/posts/controladores-templates-estilos-tailwindcss-symfony-6/)
+
+[Parte 5: Optimización de queries con Doctrine, ajustes y página de post en Symfony 6](https://cosasdedevs.com/posts/optimizacion-queries-doctrine-ajustes-pagina-post-symfony-6/)
