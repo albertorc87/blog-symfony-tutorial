@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+header > nav > ul > li > a:hover {
+    @apply text-blue-300;
+}
+
+.tags {
+    @apply inline-block p-2 mx-1 bg-orange-300 text-white uppercase text-xs font-medium;
+}
+
+.popular-posts > div > ul > li {
+    @apply p-1;
+}
+
+.popular-posts > div > ul > li > a {
+    @apply text-blue-400 underline text-lg;
+}
+
+.popular-posts > div > ul > li > a:hover {
+    @apply text-blue-500;
+}
+
+footer > ul > li {
+    @apply py-1 px-4;
+}
+
+footer > ul > li > a:hover {
+    @apply underline;
+}

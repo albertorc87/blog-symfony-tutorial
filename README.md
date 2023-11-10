@@ -5,3 +5,5 @@
 [Parte 2: Cómo crear entidades, migraciones y conectarnos a una base de datos con Symfony 6](https://cosasdedevs.com/posts/crear-entidades-migraciones-conexion-base-de-datos-symfony-6/)
 
 [Parte 3: Cómo crear datos falsos en una base de datos con Symfony 6](https://cosasdedevs.com/posts/como-crear-datos-falsos-base-de-datos-symfony-6/)
+
+[Parte 4: Controladores, templates y estilos con Tailwind CSS en Symfony 6](https://cosasdedevs.com/posts/controladores-templates-estilos-tailwindcss-symfony-6/)
