@@ -13,3 +13,5 @@
 [Parte 6: Autenticación y registro con Symfony 6](https://cosasdedevs.com/posts/autenticacion-registro-symfony-6/)
 
 [Parte 7: Cómo crear formularios con Symfony 6](https://cosasdedevs.com/posts/formularios-symfony-6/)
+
+[Parte 8: Cómo crear un panel de administración con Symfony 6](https://cosasdedevs.com/posts/crear-panel-administracion-symfony-6/)
