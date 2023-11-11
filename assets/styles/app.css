@@ -59,3 +59,19 @@ footer > ul > li > a:hover {
 .form-blog label, .form-blog input {
     @apply block text-left;
 }
+
+.form-blog div textarea {
+    @apply py-1 px-2 border-slate-300 border rounded w-full h-28;
+}
+
+.form-blog a {
+    @apply text-blue-400 underline;
+}
+
+.form-blog a:hover {
+    @apply text-blue-500;
+}
+
+.form-blog div ul li {
+    @apply text-red-500 font-semibold;
+}

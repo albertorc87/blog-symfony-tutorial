@@ -5,6 +5,7 @@ namespace App\Entity;
 use App\Repository\CommentRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: CommentRepository::class)]
 class Comment
@@ -18,6 +19,7 @@ class Comment
     private ?\DateTimeImmutable $created_at = null;
 
     #[ORM\Column(type: Types::TEXT)]
+    #[Assert\Length(min: 5, max: 500)]
     private ?string $content = null;
 
     #[ORM\ManyToOne]
