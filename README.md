@@ -11,3 +11,5 @@
 [Parte 5: Optimización de queries con Doctrine, ajustes y página de post en Symfony 6](https://cosasdedevs.com/posts/optimizacion-queries-doctrine-ajustes-pagina-post-symfony-6/)
 
 [Parte 6: Autenticación y registro con Symfony 6](https://cosasdedevs.com/posts/autenticacion-registro-symfony-6/)
+
+[Parte 7: Cómo crear formularios con Symfony 6](https://cosasdedevs.com/posts/formularios-symfony-6/)

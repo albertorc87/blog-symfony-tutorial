@@ -21,17 +21,31 @@
                     {% endfor %}
                 </div>
                 <div class="m-1 text-left">
-                    <h3>Comentarios</h3>
-                    <hr>
-                    <div class="my-3 text-left">
-                        {% for comment in post.comments %}
-                            <div class="p-3">
-                                <div>Escrito por: <strong>{{comment.user.username}}</strong></div>
-                                <div class="text-sm text-stone-500">{{comment.content}}</div>
-                            </div>
-                            <hr>
-                        {% endfor %}
-                    </div>
+                <hr>
+                <div class="form-blog">
+                    {% if app.user %}
+                        <p class="text-left">
+                            Escribe un comentario <strong>{{ app.user.username }}:</strong>
+                        </p>
+                        {{ form(form, { 'action': path('save_comment', { slug: post.slug }) }) }}
+                    {% else %}
+                        <p class="text-left py-2">
+                        Debes estar autenticado para escribir un comentario <a href="{{ path('app_login') }}">Login</a>
+                        </p>
+                    {% endif %}
+                </div>
+                <hr>
+                <h3 class="text-lg font-semibold py-2">Comentarios</h3>
+                <hr>
+                <div class="my-3 text-left">
+                    {% for comment in post.comments %}
+                        <div class="p-3">
+                            <div>Escrito por: <strong>{{comment.user.username}}</strong></div>
+                            <div class="text-sm text-stone-500">{{comment.content}}</div>
+                        </div>
+                        <hr>
+                    {% endfor %}
+                </div>
                 </div>
             </article>
         </div>
